@@ -71,3 +71,7 @@ pulldown.onchange = function(evt) {
     console.log(evt.target.value);
     window.location.href = `https://${evt.target.value}.github.io/biketirol`;
 }
+
+// GPX files mit leaflet elevation
+const controlElevation = L.control.elevation().addTo(map);
+controlElevation.load("data/etappe28.gpx");
