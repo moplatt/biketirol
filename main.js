@@ -65,3 +65,9 @@ for (let etappe of ETAPPEN) {
         <option ${selected} value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.titel}</option>
     `;
 }
+
+// auf Wechsel im Pulldown reagieren
+pulldown.onchange = function(evt) {
+    console.log(evt.target.value);
+    window.location.href = `https://${evt.target.value}.github.io/biketirol`;
+}
