@@ -80,3 +80,8 @@ const controlElevation = L.control.elevation({
     height:300,
 }).addTo(map);
 controlElevation.load("data/etappe28.gpx");
+
+var gktirol = new L.TileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png");
+var miniMap = new L.Control.MiniMap(gktirol, {
+    toggleDisplay: true
+}).addTo(map);
