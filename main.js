@@ -73,5 +73,10 @@ pulldown.onchange = function(evt) {
 }
 
 // GPX files mit leaflet elevation
-const controlElevation = L.control.elevation().addTo(map);
+const controlElevation = L.control.elevation({
+    theme: "bike-tirol",
+    time: false,
+    elevationDiv: "#profile",
+    height:300,
+}).addTo(map);
 controlElevation.load("data/etappe28.gpx");
